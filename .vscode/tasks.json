@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start LifeLink Server (localhost:8000)",
+            "type": "shell",
+            "command": ".\\start-servers.bat",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "problemMatcher": [],
+            "detail": "Starts both standalone MySQL and PHP built-in server at http://localhost:8000/"
+        },
+        {
+            "label": "Import Database (schema.sql)",
+            "type": "shell",
+            "command": "Get-Content database/schema.sql | mysql -u root -p",
+            "problemMatcher": [],
+            "detail": "Imports database schema and demo seed records into MySQL (PowerShell compatible)"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+# Temporary files & logs
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Dependencies
+/vendor/
+
+# Local Environment Overrides
+.env
+.env.local
+
+# IDE local caches (keep tracked .vscode settings, launch, tasks)
+.vscode/*.log
+.vscode/.ropeproject
